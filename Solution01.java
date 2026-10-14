@@ -20,7 +20,21 @@ class Ticket {
     }
 }
 
-// Escreva a classe StudentTicket aqui, herdando de Ticket
+class StudentTicket extends Ticket {
+    public StudentTicket(double basePrice) {
+        super(basePrice);
+    }
+    
+    @Override
+    public String getDescription() {
+        return "student ticket";
+    }
+    
+    @Override
+    public double getPrice() {
+        return getBasePrice() / 2;
+    }
+}
 
 // Escreva a classe SeniorTicket aqui, herdando de Ticket
 
@@ -45,12 +59,8 @@ public class Solution01 {
         }
         scanner.close();
 
-        double total = 0;
-        for (Ticket ticket : tickets) {
-            // A variável é do tipo Ticket, mas o método executado é o da classe real do objeto
-            System.out.printf("%s: %.2f%n", ticket.getDescription(), ticket.getPrice());
-            total += ticket.getPrice();
-        }
-        System.out.printf("total: %.2f%n", total);
+        printReceipt(tickets);
     }
+
+    // Escreva o método printReceipt aqui
 }

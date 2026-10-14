@@ -2,9 +2,9 @@
 
 Arquivos-base dos exercícios da lista de polimorfismo.
 
-| Arquivo | Exercício | Entrega |
+| Caminho | Exercício | Entrega |
 |---|---|---|
 | Solution01.java | Ingressos com desconto | Um único arquivo, Solution01.java |
-| Solution02.java | Folha de pagamento polimórfica | Um .zip com Employee.java, SalariedEmployee.java, HourlyEmployee.java, CommissionEmployee.java e Solution02.java |
+| ex02/ | Folha de pagamento polimórfica | Um .zip com os cinco arquivos da pasta ex02, sem alteração, e o arquivo novo Payroll.java |
 
-No exercício 2, o arquivo Solution02.java deve ser enviado sem alterações. Ele só compila depois que as outras quatro classes existirem.
+No exercício 2, os arquivos da pasta ex02 só compilam depois que Payroll.java existir.

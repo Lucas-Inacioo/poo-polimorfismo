@@ -29,13 +29,14 @@ public class Solution02 {
         }
         scanner.close();
 
-        double total = 0;
         for (Employee employee : employees) {
-            // A variável é do tipo Employee, mas toString e earnings são os da classe real do objeto
             System.out.println(employee);
             System.out.printf("earned: %.2f%n", employee.earnings());
-            total += employee.earnings();
         }
-        System.out.printf("total payroll: %.2f%n", total);
+
+        Employee top = Payroll.highestPaid(employees);
+        System.out.printf("total payroll: %.2f%n", Payroll.total(employees));
+        System.out.printf("highest paid: %s %s%n", top.getFirstName(), top.getLastName());
+        System.out.printf("employees with overtime: %d%n", Payroll.countOvertime(employees));
     }
 }
